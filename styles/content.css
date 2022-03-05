@@ -19,7 +19,7 @@ body p {
 
 header .hr, section.opportunity .hr, section.classes .hr, section.testimonial .hr {
   height: 20px;
-  background: url("/images/divider.svg") no-repeat;
+  background: url("../images/divider.svg") no-repeat;
   background-size: auto 14px;
   margin-bottom: 16px;
 }
@@ -162,7 +162,7 @@ header .member span {
 }
 
 header .header-right {
-  background-image: url("/images/learning.png");
+  background-image: url("../images/learning.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -271,7 +271,7 @@ section.classes .container-class a {
 section.classes .container-class a::before {
   opacity: 0;
   z-index: 999;
-  content: url("/images/play.png");
+  content: url("../images/play.png");
   position: absolute;
   top: 44%;
   bottom: 50%;
@@ -443,7 +443,7 @@ section.testimonial .btn-write:active {
 
 section.testimonial .btn-write::after {
   margin-left: 1rem;
-  content: url("/images/arrow-right.svg");
+  content: url("../images/arrow-right.svg");
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -464,7 +464,7 @@ section.testimonial .btn-write:hover {
 }
 
 section.testimonial .review-image {
-  background-image: url("/images/testimonial.png");
+  background-image: url("../images/testimonial.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 421px;
@@ -526,7 +526,7 @@ section.mentor .container {
   color: white;
   padding: 3.25rem 6rem;
   border-radius: 5px;
-  background-image: url("/images/bg-mentor.png");
+  background-image: url("../images/bg-mentor.png");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
