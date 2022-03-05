@@ -1,0 +1,45 @@
+// Styles Section Footer
+footer {
+    margin-top: 4rem;
+    background-color: $primaryColor;
+    padding-top: 72px;
+    padding-bottom: 72px;
+
+    p {
+        color: white;
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+        font-weight: 400;
+    }
+
+    img {
+        width: 7.5rem;
+        filter: brightness(100);
+        margin-bottom: 1.5rem;
+    }
+
+    .description {
+        max-width: 31.25rem;
+        margin: auto auto;
+        opacity: 0.5;
+    }
+
+    .nav {
+        margin-top: 2.875rem;
+
+        .nav-item {
+            .nav-link {
+                font-size: 15px;
+                color: white;
+
+                &:hover {
+                    color: darken($color: white, $amount: 30)
+                }
+
+                .bi {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

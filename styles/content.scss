@@ -1,0 +1,454 @@
+// Memakai Import karena use tidak bisa digunakan di dalam file scss menggunakan ekstension vscode
+@import 'mixins';
+@import 'variables';
+@import 'fonts';
+
+// Icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+// Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $primaryColor;
+
+    p {
+        color: $textColor;
+    }
+}
+
+// Style Devider Custom
+%hr {
+    height: 20px;
+    background: url('/images/divider.svg') no-repeat;
+    background-size: auto 14px;
+    margin-bottom: 16px;
+}
+
+%h2 {
+    font-weight: 700;
+    line-height: 3.75rem;
+}
+
+@import 'header';
+
+// Style Section Partner
+section.partner {
+    background-color: rgba(189, 190, 219, 0.05);
+    margin-top: 3rem;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+// Style Section Opportunity
+section.opportunity {
+    text-align: center;
+    padding-top: 4.5rem;
+
+    h2 {
+        @extend %h2;
+    }
+
+    .hr {
+        @extend %hr;
+        background-position: center;
+    }
+
+    .bg-icon {
+        background-color: $secondaryColor;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+        margin: 3rem auto 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bi {
+            font-size: 2.5rem;
+        }
+    }
+
+    .card {
+        h3 {
+            font-weight: 700;
+            font-size: 1.375rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            color: black;
+            line-height: 2rem;
+        }
+
+        .card-body {
+            padding: 96px 38px 74px;
+        }
+
+        border: none;
+        box-shadow: 0px 100px 80px rgba(61, 63, 111, 0.09),
+        0px 22.34px 17.87px rgba(61, 63, 111, 0.0536),
+        0px 6.65px 5.32px rgba(61, 63, 111, 0.0364);
+        ;
+
+        .card-highlight {
+            color: white;
+            border-radius: .5rem;
+            background-color: $primaryColor !important;
+
+            .bg-icon {
+                background-color: white !important;
+                color: $primaryColor;
+            }
+
+            p {
+                color: white;
+            }
+        }
+    }
+}
+
+// Styles Section Classes
+section.classes {
+    margin-top: 5.5rem;
+
+    h2 {
+        @extend %h2;
+    }
+
+    .hr {
+        @extend %hr;
+        margin-bottom: 2.5rem;
+    }
+
+    .container-class {
+        color: white;
+        position: relative;
+
+        p.title {
+            color: white;
+        }
+
+        a {
+            color: white;
+
+            &::before {
+                opacity: 0;
+                z-index: 999;
+                content: url('/images/play.png');
+                position: absolute;
+                top: 44%;
+                bottom: 50%;
+                left: 45%;
+                right: 50%;
+                transition: all .5s ease-in-out;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                box-shadow: inset 0px 0px 30px black;
+                border-radius: .5rem;
+                transition: all .5s ease-in-out;
+            }
+
+            &:hover::after {
+                box-shadow: inset 0px 0px 150px black;
+            }
+
+            img {
+                border-radius: .5rem;
+                width: 100%;
+            }
+
+            .class-content {
+                position: absolute;
+                bottom: 1.5rem;
+                left: 1.5rem;
+                line-height: 1rem;
+
+                p.title {
+                    font-weight: 700;
+                    font-size: 1.125rem;
+                }
+
+                .time {
+                    font-size: 14px;
+                }
+
+                .member-class {
+                    margin-top: .75rem;
+
+                    @for $i from 1 through 3 {
+                        .member-class-#{$i} {
+                            @include member(32px);
+
+                            @if $i==1 {
+                                margin-left: 0;
+                            }
+
+                            @else if $i !=3 {
+                                margin-left: -1rem;
+                            }
+
+                            @else {
+                                margin-left: -1rem;
+                                margin-right: 0.75rem;
+                            }
+                        }
+                    }
+
+                    font-family: 'Mulish',
+                    sans-serif;
+                    font-size: 16px;
+                }
+            }
+
+            .class-price {
+                @include button();
+                right: 1.5rem;
+                bottom: 3.25rem;
+                position: absolute;
+                border: none;
+                background-color: $primaryColor;
+                padding: .625rem 1.5rem !important;
+
+                &:hover {
+                    background-color: lighten($color: $primaryColor, $amount: 20%);
+                }
+            }
+        }
+    }
+
+    .btn-videos {
+        @include button();
+        margin-top: 4.75rem;
+        border: 2px $primaryColor solid;
+        font-weight: 600px;
+        color: $primaryColor;
+
+        &:hover {
+            border: 2px transparent solid;
+            background-color: lighten($color: $primaryColor, $amount: 20);
+            color: white;
+        }
+    }
+}
+
+// Styles Section Testimonial
+section.testimonial {
+    padding-top: 6.25rem;
+
+    h2 {
+        @extend %h2;
+    }
+
+    .hr {
+        @extend %hr;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        line-height: 1.6rem;
+    }
+
+    .btn-write {
+        @include button();
+        border: 2px $primaryColor solid;
+        border-radius: 1.875rem;
+        padding: .75rem 2.875rem;
+        color: $primaryColor;
+        display: flex;
+        max-width: 21.5rem;
+        align-items: center;
+
+        &::after {
+            margin-left: 1rem;
+            content: url('/images/arrow-right.svg');
+            transition: all .3s ease-in-out;
+            ;
+        }
+
+        &:hover::after {
+            transform: translateX(1.5rem);
+            transition: all .3s ease-in;
+            filter: brightness(100);
+        }
+
+        &:hover {
+            background-color: lighten($color: $primaryColor, $amount: 20);
+            border: 2px transparent solid;
+            color: white !important;
+        }
+    }
+
+    .review-image {
+        background-image: url('/images/testimonial.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 421px;
+        height: 495px;
+        z-index: -99;
+        position: absolute;
+        margin-left: -80px;
+        border-radius: 20px;
+    }
+
+    @media screen and (max-width: 576px) {
+        .review-image {
+            width: (421px / 1.2);
+            height: (495px / 1.2);
+        }
+    }
+
+    .card {
+        border: none;
+        border-radius: 20px;
+        margin-top: 350px;
+
+        .card-body {
+            padding: 3.25rem 2.5rem 2.25rem 1.25rem;
+            border-left: 20px salmon solid;
+            border-radius: 20px;
+            box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
+
+            p.review {
+                border-left: 1px solid #BDBDD1;
+                padding-left: 12px;
+                line-height: 2rem;
+            }
+
+            div.name-review {
+                font-size: 1.3125rem;
+                font-weight: 500;
+                color: $textColor;
+            }
+
+            div.count-review {
+                color: $textColor;
+            }
+
+            .bi-star-fill {
+                font-size: 1.5rem;
+                color: #FBA333;
+            }
+        }
+    }
+}
+
+// Styles Section Mentor
+section.mentor {
+    margin-top: 6rem;
+
+    .container {
+        background-color: $primaryColor;
+        color: white;
+        padding: 3.25rem 6rem;
+        border-radius: 5px;
+        background-image: url('/images/bg-mentor.png');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+    }
+
+    h2 {
+        @extend %h2;
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+    }
+
+    .btn-mentor {
+        @include button();
+        color: $primaryColor;
+        background-color: white;
+        padding: .75rem 1.5rem;
+        font-weight: 500;
+
+        &:hover {
+            background-color: darken($color: white, $amount: 20);
+        }
+    }
+}
+
+section.subcribe {
+    margin-top: 3.5rem;
+
+    .container {
+        padding-left: 6rem;
+        padding-right: 6rem;
+
+        img {
+            width: 100%;
+        }
+
+        h2 {
+            @extend %h2;
+        }
+
+        p {
+            line-height: 25.6px;
+        }
+
+        .form-subcribe {
+            .form-control {
+                max-width: 28.125rem;
+                border-radius: 5px !important;
+                height: 3.625rem;
+                background-color: #F9F9F9;
+                transition: width 0.4s ease-in-out;
+
+                &[type="email"]:focus {
+                    box-shadow: 0 0 0 3px $primaryColor + 80%;
+                }
+
+                &[placeholder="Your email"] {
+                    padding-left: 2rem;
+                    padding-right: 7.25rem;
+                }
+            }
+
+            .btn-subcribe {
+                border: none;
+                border-radius: 0px 5px 5px 28px !important;
+                margin-left: -108px !important;
+                z-index: 5;
+                background-color: $primaryColor;
+                font-size: .875rem;
+                padding-left: 26px;
+                padding-right: 21px;
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &:hover {
+                    background-color: lighten($color: $primaryColor, $amount: 20);
+                }
+            }
+        }
+    }
+}
+
+@import 'footer';
+
+@media screen and (max-width: 576px) {
+    section.mentor > .container,
+    section.subcribe > .container {
+        padding-left: .75rem !important;
+        padding-right: .75rem !important;
+    }
+}

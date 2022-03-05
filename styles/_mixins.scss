@@ -1,0 +1,19 @@
+// Mixins
+@mixin button {
+    border-radius: .5rem;
+    padding: .75rem 2.5rem;
+
+    &:focus {
+        box-shadow: 0 0 0 0.1rem $primaryColor + 80%;
+    }
+
+    &:active {
+        box-shadow: 0 0 0 0.1rem $primaryColor + 20%;
+    }
+}
+
+@mixin member($value) {
+    width: $value;
+    border-radius: ($value / 2);
+    border: 3px solid white;
+}

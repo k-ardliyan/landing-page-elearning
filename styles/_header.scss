@@ -1,0 +1,116 @@
+// Navbar Styles
+nav.navbar {
+    padding-top: 45px;
+
+    .navbar-brand {
+        .logo-brand {
+            width: 120px;
+            height: auto;
+        }
+    }
+
+    .navbar-collapse {
+        .navbar-nav {
+            .nav-item {
+                .bi {
+                    vertical-align: middle;
+                }
+
+                .btn-signup {
+                    @include button();
+                    color: $primaryColor;
+                    font-weight: 600;
+                    margin-right: .5rem;
+
+                    &:hover {
+                        color: lighten($color: $primaryColor, $amount: 20%);
+                    }
+                }
+
+                .btn-login {
+                    @include button();
+                    background-color: $primaryColor;
+                    color: white;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: lighten($color: $primaryColor, $amount: 20%);
+                    }
+                }
+
+                @media screen and (max-width: 992px) {
+                    .btn-signup,
+                    .btn-login {
+                        width: 100%;
+                        margin-bottom: .75rem;
+                    }
+                }
+
+            }
+
+            .nav-link {
+                color: $primaryColor;
+
+                &:hover {
+                    color: lighten($color: $primaryColor, $amount: 20%);
+                    ;
+                }
+            }
+        }
+    }
+}
+
+// Style Section Header
+header {
+    padding-top: 2.5rem;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 3.75rem;
+    }
+
+    .hr {
+        @extend %hr;
+    }
+
+    p {
+        color: $textColor;
+        line-height: 1.875rem;
+    }
+
+    .member {
+        color: $textColor;
+
+        @for $i from 1 through 5 {
+            .member-#{$i} {
+                @if $i==1 {
+                    @include member(48px);
+                }
+
+                @else {
+                    @include member(48px);
+                    margin-left: -24px;
+                }
+            }
+        }
+
+        span {
+            color: $primaryColor;
+            font-weight: 500;
+        }
+    }
+
+    .header-right {
+        background-image: url("/images/learning.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        .image-container {
+            width: 100%;
+            height: 655px;
+        }
+    }
+}
