@@ -415,6 +415,31 @@ section.testimonial p {
   line-height: 1.6rem;
 }
 
+section.testimonial .btn-testimonial {
+  position: relative;
+  left: 22.5rem;
+  top: 14rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  -webkit-box-shadow: 0px 4px 60px rgba(41, 44, 124, 0.15);
+          box-shadow: 0px 4px 60px rgba(41, 44, 124, 0.15);
+  border-radius: 32px;
+}
+
+section.testimonial .btn-testimonial:hover {
+  background-color: #c2eaf6;
+}
+
+section.testimonial .btn-testimonial:hover i {
+  color: white;
+}
+
+section.testimonial .btn-testimonial i {
+  font-size: 24px;
+  color: #1EA4CE;
+}
+
 section.testimonial .btn-write {
   border-radius: .5rem;
   padding: .75rem 2.5rem;
@@ -479,6 +504,13 @@ section.testimonial .review-image {
   section.testimonial .review-image {
     width: 350.83333px;
     height: 412.5px;
+  }
+  section.testimonial .btn-testimonial {
+    left: 15rem;
+    top: 10rem;
+  }
+  section.testimonial .card {
+    margin-top: 250px !important;
   }
 }
 

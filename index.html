@@ -104,24 +104,48 @@
     <!-- Section Partner -->
     <section class="partner">
         <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col">
-                    <img src="images/partner-1.png" alt="Partner-1">
+            <!-- Slider Mobile -->
+            <div id="carousel" class="carousel slide d-block d-lg-none" data-bs-ride="carousel">
+                <div class="caraousel-inner">
+                    <div class="row align-items-center">
+                        <div class="col carousel-item active">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/partner-1.png" alt="Partner-1">
+                                </div>
+                                <div class="col">
+                                    <img src="images/partner-2.png" alt="Partner-2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col carousel-item">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/partner-3.png" alt="Partner-1">
+                                </div>
+                                <div class="col">
+                                    <img src="images/partner-4.png" alt="Partner-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <img src="images/partner-1.png" alt="Partner-2">
-                </div>
-                <div class="col">
-                    <img src="images/partner-4.png" alt="Partner-4">
-                </div>
-                <div class="col">
-                    <img src="images/partner-2.png" alt="Partner-3">
-                </div>
-                <div class="col">
-                    <img src="images/partner-3.png" alt="Partner-5">
-                </div>
-                <div class="col">
-                    <img src="images/partner-3.png" alt="Partner-6">
+            </div>
+            <!-- Slider Desktop -->
+            <div class="d-none d-lg-block">
+                <div class="row">
+                    <div class="col">
+                        <img src="images/partner-1.png" alt="Partner-1">
+                    </div>
+                    <div class="col">
+                        <img src="images/partner-2.png" alt="Partner-2">
+                    </div>
+                    <div class="col">
+                        <img src="images/partner-3.png" alt="Partner-2">
+                    </div>
+                    <div class="col">
+                        <img src="images/partner-4.png" alt="Partner-2">
+                    </div>
                 </div>
             </div>
         </div>
@@ -285,22 +309,48 @@
                 <div class="col-12 col-md-6">
                     <!-- <img class="review-image" src="images/testimonial.png" alt> -->
                     <div class="review-image"></div>
+                    <button class="btn btn-testimonial" type="button" data-bs-target="#testimonialControls" data-bs-slide="next">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
                     <div class="card">
                         <div class="card-body">
-                            <p class="review">"Thank you so much for your help. It's exactly what I've been looking for.
-                                You won't
-                                regret it. It really saves me time and effort. Skilline is exactly what our business has
-                                been lacking."</p>
-                            <div class="d-flex justify-content-between">
-                                <div class="name-review align-self-center">Wahyu Rose</div>
-                                <div class="count-review text-center">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <br>
-                                    12 reviews at Yelp
+                            <div id="testimonialControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <p class="review">"Thank you so much for your help. It's exactly what I've been looking for.
+                                            You won't
+                                            regret it. It really saves me time and effort. Skilline is exactly what our business has
+                                            been lacking."</p>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="name-review align-self-center">Wahyu Rose</div>
+                                            <div class="count-review text-center">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <br>
+                                                12 reviews at Yelp
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <p class="review">"Thank you so much for your help. It's exactly what I've been looking for.
+                                            You won't regret it. It really saves me time and effort. Skilline is exactly what our business has
+                                            been lacking."</p>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="name-review align-self-center">Josee</div>
+                                            <div class="count-review text-center">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <br>
+                                                9 reviews at Yelp
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -337,9 +387,11 @@
                         Week</p>
                     <form action="#" class="form-subcribe">
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Your email" aria-label="Your email" aria-describedby="button-addon2">
-                            <button class="btn btn-secondary btn-subcribe" type="button" id="button-addon2">Subcribe</button>
-                          </div>                          
+                            <input type="email" class="form-control" placeholder="Your email" aria-label="Your email"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-secondary btn-subcribe" type="button"
+                                id="button-addon2">Subcribe</button>
+                        </div>
                     </form>
                 </div>
             </div>

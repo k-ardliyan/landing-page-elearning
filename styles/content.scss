@@ -266,6 +266,30 @@ section.testimonial {
         line-height: 1.6rem;
     }
 
+    .btn-testimonial {
+        position: relative;
+        left: 22.5rem;
+        top: 14rem;
+        width: 4rem;
+        height: 4rem;
+        background-color: white;
+        box-shadow: 0px 4px 60px rgba(41, 44, 124, 0.15);
+        border-radius: (64px / 2);
+
+        &:hover {
+            background-color: lighten($color: #1EA4CE, $amount: 40%);
+
+            i {
+                color: white;
+            }
+        }
+
+        i {
+            font-size: 24px;
+            color: #1EA4CE;
+        }
+    }
+
     .btn-write {
         @include button();
         border: 2px $primaryColor solid;
@@ -312,6 +336,15 @@ section.testimonial {
         .review-image {
             width: (421px / 1.2);
             height: (495px / 1.2);
+        }
+
+        .btn-testimonial {
+            left: 15rem;
+            top: 10rem;
+        }
+        
+        .card {
+            margin-top: 250px !important;
         }
     }
 
@@ -446,8 +479,9 @@ section.subcribe {
 @import 'footer';
 
 @media screen and (max-width: 576px) {
-    section.mentor > .container,
-    section.subcribe > .container {
+
+    section.mentor>.container,
+    section.subcribe>.container {
         padding-left: .75rem !important;
         padding-right: .75rem !important;
     }
